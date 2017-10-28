@@ -1,0 +1,33 @@
+doctype html
+
+include var/global.pug
+include var/mixins.pug
+
+html
+	include includes/head.pug
+	body
+		.wrapper
+			header.header
+				.logo
+					+ image("logo.png", "logo")
+				.header__title
+					h1 Coming Soon
+					h2 goplae.co.uk is coming soon but in the meantime check out this page
+						br 
+						| and sign up to our newsletter for more information
+					input.signUp(placeholder="Enter email address")
+					button Sign Up
+				.dotNav 
+					a(href="#") 
+					a(href="#") 
+					a(href="#") 
+					a(href="#") 
+					a(href="#") 
+					a(href="#") 
+			main.main
+			footer.footer
+
+						//+ image("img16.png", "image16")
+		script(src="js/jquery-3.2.1.min.js")
+		script(src="js/slick.min.js")
+		script(src="js/user.js")
