@@ -9,14 +9,16 @@ html
 		.wrapper
 			header.header
 				.logo
-					+ image("logo.png", "logo")
+					a(href="#")
+						+ image("logo.png", "logo")
 				.header__title
 					h1 Coming Soon
 					h2 goplae.co.uk is coming soon but in the meantime check out this page
 						br 
 						| and sign up to our newsletter for more information
 					input.signUp(placeholder="Enter email address")
-					button Sign Up
+					a(href="#")
+						button Sign Up
 				.dotNav 
 					a(href="#") 
 					a(href="#") 
@@ -25,6 +27,50 @@ html
 					a(href="#") 
 					a(href="#") 
 			main.main
+				.about
+					.descript
+						h3 About Plae
+						p Previously a Designer for Puma and Adidas, Head Designer Ryan Ringholz has started a new revolution in kids trainers. Using technology usually reserved for elite athletes, Plae creates shoes designed especially for a child’s foot. 
+						p Because kids feet are always growing, their shoes should accommodate leaving the cartilage and fledgling bone room to grow its own way. The interchangeable tabs adjust to accommodate thinner, wider or thicker feet and nearly all Plae shoes can fit an AFO orthotic brace.
+						p With their dynamic traction, little feet can feel the ground beneath them and get a grip on it. The rest is designed to elite athlete standards: super shock absorption, durable toe guards, and wicking, washable anti-microbial inserts.
+						p With every shoe, Plae sources responsible, recycled, and non-toxic materials, and makes sure manufacturing.
+					.imgBlock
+						+ image("img1.jpg", "img1")
+				.review
+					.imgBlock
+						+ image("img2.jpg", "img2")
+					.descript
+						h3 What our customers say
+						p like them because they are very comfy and soft inside. They are really light which means I run faster. I like the cool straps that I can change.
+						p Charlie (age 8)
+					.descript
+						p I like that I can do PE in them because they're so comfy and then after school in the park, the bottoms are grippy so I can climb really well
+						p Edie (age 6)
+					.imgBlock
+						+ image("img3.jpg", "img3")
+				.slider
+					.single-item
+						.item
+							+ image("slide1.jpg", "slide1")
+							p TY
+						.item
+							+ image("slide2.jpg", "slide2")
+							p TY
+						.item
+							+ image("slide3.jpg", "slide3")
+							p TY
+						.item
+							+ image("slide4.jpg", "slide4")
+							p TY
+						.item
+							+ image("slide5.jpg", "slide5")
+							p TY
+						.item
+							+ image("slide6.jpg", "slide6")
+							p TY
+						.item
+							+ image("slide7.jpg", "slide7")
+							p TY
 			footer.footer
 
 						//+ image("img16.png", "image16")
