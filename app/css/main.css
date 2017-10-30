@@ -234,7 +234,36 @@ html {
     font: 3rem/3.8rem "NunitoLight"; }
   .whyContent p {
     font: 1.8rem/4rem "YantramanavThin"; }
-  .whyContent .leftBlock p, .whyContent .rightBlock p {
-    font: 1.5rem/2.2rem "YantramanavThin"; }
-  .whyContent .leftBlock .title, .whyContent .rightBlock .title {
-    font: 1.6rem/2.4rem "YantramanavRegular"; }
+  .whyContent .whyContent__descript {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 6rem 0 6rem;
+    transform: translateY(-40px); }
+    .whyContent .whyContent__descript .leftBlock .textBlock, .whyContent .whyContent__descript .rightBlock .textBlock {
+      padding: 1rem;
+      width: 230px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 1rem; }
+    .whyContent .whyContent__descript .leftBlock p, .whyContent .whyContent__descript .rightBlock p {
+      font: 1.5rem/2.2rem "YantramanavThin"; }
+    .whyContent .whyContent__descript .leftBlock .title, .whyContent .whyContent__descript .rightBlock .title {
+      font: 1.6rem/2.4rem "YantramanavRegular"; }
+
+.find {
+  padding-top: 9rem;
+  text-align: center;
+  max-width: 1280px; }
+  .find h5 {
+    font: 3rem/3.8rem "NunitoLight"; }
+  .find p {
+    font: 1.8rem/4rem "YantramanavThin"; }
+  .find .findBlocks {
+    text-align: left;
+    display: flex;
+    flex-flow: wrap; }
+    .find .findBlocks p {
+      font: 1.5rem/2.2rem "YantramanavThin"; }
+    .find .findBlocks .title {
+      font: 1.6rem/2.4rem "YantramanavRegular"; }
