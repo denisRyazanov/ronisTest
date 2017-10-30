@@ -88,13 +88,16 @@ html {
     font: 2rem/1.8rem "NunitoRegular";
     color: #fff;
     cursor: pointer; }
+    .header button:hover {
+      background-color: #1a8a41; }
   .header .dotNav {
     display: flex;
     flex-flow: column;
     align-items: center;
     position: fixed;
     right: 4%;
-    top: calc(50% - 50px); }
+    top: calc(50% - 50px);
+    z-index: 99999; }
     .header .dotNav a {
       width: 10px;
       height: 10px;
@@ -106,6 +109,7 @@ html {
         width: 12px;
         height: 12px; }
 
+/*--------------------------------------------------MEDIA HEADER--------------------*/
 @media screen and (max-width: 414px) {
   .header .header__title {
     padding-top: 120px; }
@@ -138,26 +142,99 @@ html {
     padding: 0 11.5rem 4rem 11.5rem; }
 
 .imgBlock img {
+  display: block;
   width: 100%; }
 
-.review .descript {
-  padding-top: 19rem; }
-  .review .descript h3 {
-    margin-bottom: 13rem; }
-  .review .descript p {
-    font: 2rem/3rem "YantramanavThin";
-    text-align: center;
-    padding: 0 16.5rem 10rem 16.5rem; }
+.review {
+  margin-bottom: 8rem; }
+  .review .descript {
+    padding-top: 19rem; }
+    .review .descript h3 {
+      margin-bottom: 13rem; }
+    .review .descript p {
+      font: 2rem/3rem "YantramanavThin";
+      text-align: center;
+      padding: 0 16.5rem 10rem 16.5rem; }
 
-.slider {
-  max-width: 1280px;
-  margin: 0 auto; }
-
+/*--------------------------------------------------MEDIA MAIN--------------------*/
 @media screen and (max-width: 1024px) {
   .descript {
     width: 90%; }
     .descript p {
       padding: 0 0 4rem 0; }
-  .review .descript h3 {
-    padding-top: 8rem;
-    margin-bottom: 6rem; } }
+  .review .descript {
+    width: 90%; }
+    .review .descript h3 {
+      padding-top: 8rem;
+      margin-bottom: 6rem; }
+    .review .descript p {
+      padding: 0 0 10rem 0; } }
+
+/*---------------------------------------------------SLIDER----------------------------------------------*/
+.slider {
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+  .slider h4 {
+    font: 3rem/3.8rem "NunitoLight"; }
+  .slider p {
+    font: 1.8rem/4rem "YantramanavThin"; }
+  .slider .single-item .item img {
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle; }
+  .slider .single-item .item p {
+    font: 2.4rem/3.8rem "NunitoLight"; }
+  .slider .single-item .slick-prev {
+    position: absolute;
+    text-indent: -99999px;
+    background: url(../assets/img/left.png);
+    width: 38px;
+    height: 38px;
+    z-index: 99;
+    cursor: pointer;
+    top: 50%;
+    right: 80%; }
+  .slider .single-item .slick-next {
+    position: absolute;
+    text-indent: -99999px;
+    background: url(../assets/img/right.png);
+    width: 38px;
+    height: 38px;
+    z-index: 99;
+    cursor: pointer;
+    top: 50%;
+    left: 80%; }
+
+/*---------------------------------MEDIA Slider----------------------------*/
+@media screen and (max-width: 768px) {
+  .slider .single-item .item img {
+    width: 100%; }
+  .slider .single-item .slick-prev {
+    top: 85%;
+    right: 80%; }
+  .slider .single-item .slick-next {
+    top: 85%;
+    left: 80%; } }
+
+/*-----------------------------------------------------WHY----------------------------*/
+.why {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.whyContent {
+  width: 100%;
+  height: 768px;
+  text-align: center;
+  background: url(../assets/img/whyDots.png) center 180px no-repeat, url(../assets/img/whyBg.jpg) center no-repeat;
+  padding-top: 8rem; }
+  .whyContent h5 {
+    margin-bottom: 2.5rem;
+    font: 3rem/3.8rem "NunitoLight"; }
+  .whyContent p {
+    font: 1.8rem/4rem "YantramanavThin"; }
+  .whyContent .leftBlock p, .whyContent .rightBlock p {
+    font: 1.5rem/2.2rem "YantramanavThin"; }
+  .whyContent .leftBlock .title, .whyContent .rightBlock .title {
+    font: 1.6rem/2.4rem "YantramanavRegular"; }

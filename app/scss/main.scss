@@ -30,15 +30,17 @@
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  border: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
 }
 
 html {
-  font-size: 62.5%; }
+	font-size: 62.5%;
+	
+}
 
 .wrapper {
 	display: flex;
@@ -98,6 +100,9 @@ html {
 		font: 2rem/1.8rem "NunitoRegular";
 		color: #fff;
 		cursor: pointer;
+		&:hover {
+			background-color: #1a8a41;
+		}
 	}
 	.dotNav {
 		display: flex;
@@ -106,6 +111,7 @@ html {
 		position: fixed;
 		right: 4%;
 		top: calc(50% - 50px);
+		z-index: 99999;
 		a {
 			width: 10px;
 			height: 10px;
@@ -120,6 +126,7 @@ html {
 		}
 	}
 }
+/*--------------------------------------------------MEDIA HEADER--------------------*/
 @media screen and (max-width: 414px) {
 	.header {
 		.header__title {
@@ -164,11 +171,13 @@ html {
 }
 .imgBlock {
 	img {
+		display: block;
 		width: 100%;
 	}
 }
 
 .review {
+	margin-bottom: 8rem;
 	.descript {
 		padding-top: 19rem;
 		h3 {
@@ -181,13 +190,7 @@ html {
 		}
 	}
 }
-.slider {
-	max-width: 1280px;
-	margin: 0 auto;
-	.item {
-
-	}
-}
+/*--------------------------------------------------MEDIA MAIN--------------------*/
 @media screen and (max-width: 1024px) {
 	.descript { 
 		width: 90%;
@@ -197,12 +200,115 @@ html {
 	}
 	.review {
 		.descript {
+			width: 90%;
 			h3 {
 				padding-top: 8rem;
 				margin-bottom: 6rem;
 			}
+			p {
+				padding: 0 0 10rem 0;
+			}
 		}
 	}
 }
+/*---------------------------------------------------SLIDER----------------------------------------------*/
+.slider {
+	text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	h4 {
+		font: 3rem/3.8rem "NunitoLight"; 
+	}
+	p {
+		font: 1.8rem/4rem "YantramanavThin";
+	}
+	.single-item {
+		.item {
+			img {
+				display: block;
+				margin: 0 auto;
+				vertical-align: middle;
+			}
+			p {
+				font: 2.4rem/3.8rem "NunitoLight"; 
+			}
+		}
+		.slick-prev {
+			position: absolute;
+			text-indent: -99999px;
+			background: url(../assets/img/left.png);
+			width: 38px;
+			height: 38px;
+			z-index: 99;
+			cursor: pointer;
+			top: 50%;
+			right: 80%;
+		}
+		.slick-next {
+			position: absolute;
+			text-indent: -99999px;
+			background: url(../assets/img/right.png);
+			width: 38px;
+			height: 38px;
+			z-index: 99;
+			cursor: pointer;
+			top: 50%;
+			left: 80%;
+		}
+	}
+}
+/*---------------------------------MEDIA Slider----------------------------*/
+@media screen and (max-width: 768px) {
+	.slider {
+		.single-item {
+			.item {
+				img {
+					width: 100%;
+				}
+			}
+			.slick-prev {
+				top: 85%;
+				right: 80%;
+			}
+			.slick-next {
+				top: 85%;
+				left: 80%;
+			}
+		}
+	}
+	
+}
+/*-----------------------------------------------------WHY----------------------------*/
 
+.why {
+	max-width: 1280px;
+	margin: 0 auto;
+}
 
+.whyContent {
+	width: 100%;
+	height: 768px;
+	text-align: center;
+	background: url(../assets/img/whyDots.png)  center 180px no-repeat,
+				url(../assets/img/whyBg.jpg) center no-repeat ;
+	padding-top: 8rem;
+	h5 {
+		margin-bottom: 2.5rem;
+		font: 3rem/3.8rem "NunitoLight"; 
+	}
+	p {
+		font: 1.8rem/4rem "YantramanavThin";
+	}
+	.leftBlock, .rightBlock {
+		p {
+			font: 1.5rem/2.2rem "YantramanavThin";
+		}
+		.title {
+			font: 1.6rem/2.4rem "YantramanavRegular";
+		}
+	}
+}
+@media screen and (width: 768px) {
+
+}
