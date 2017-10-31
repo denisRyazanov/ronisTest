@@ -81,29 +81,6 @@ html {
 		margin-bottom: 6rem;
 		text-shadow:  0 0 10px black;
 	}
-	.signUp {
-		border-radius: 24px 0 0 24px;
-		width: 310px;
-		height: 4.8rem;
-		vertical-align: middle; 
-		padding: 0 3rem;
-		font: 1.8rem/1.8rem "YantramanavLight";
-		color: #8c8c8c;
-	}
-	button {
-		width: 165px;
-		height: 48px;
-		margin-left: -2px;
-		vertical-align: middle; 
-		background-color: #20ab50;
-		border-radius: 0 24px 24px 0;
-		font: 2rem/1.8rem "NunitoRegular";
-		color: #fff;
-		cursor: pointer;
-		&:hover {
-			background-color: #1a8a41;
-		}
-	}
 	.dotNav {
 		display: flex;
 		flex-flow: column;
@@ -126,14 +103,38 @@ html {
 		}
 	}
 }
+/*----------------------sign up------------------------------*/
+.signUp {
+	border-radius: 24px 0 0 24px;
+	width: 310px;
+	height: 4.8rem;
+	vertical-align: middle; 
+	padding: 0 3rem;
+	font: 1.8rem/1.8rem "YantramanavLight";
+	color: #8c8c8c;
+}
+button {
+	width: 165px;
+	height: 48px;
+	margin-left: -2px;
+	vertical-align: middle; 
+	background-color: #20ab50;
+	border-radius: 0 24px 24px 0;
+	font: 2rem/1.8rem "NunitoRegular";
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background-color: #1a8a41;
+	}
+}
 /*--------------------------------------------------MEDIA HEADER--------------------*/
 @media screen and (max-width: 414px) {
+	.signUp, button {
+		border-radius: 24px;
+	}
 	.header {
 		.header__title {
 			padding-top: 120px;
-		}
-		.signUp, button {
-			border-radius: 24px;
 		}
 		.dotNav {
 			flex-flow: wrap;
@@ -285,7 +286,16 @@ html {
 	max-width: 1280px;
 	margin: 0 auto;
 }
-
+.whyContent, .find, .like {
+	h5 {
+		text-align: center;
+		font: 3rem/3.8rem "NunitoLight"; 
+	}
+	p {
+		text-align: center;
+		font: 1.8rem/4rem "YantramanavThin";
+	}
+}
 .whyContent {
 	width: 100%;
 	height: 768px;
@@ -295,14 +305,11 @@ html {
 	padding-top: 8rem;
 	h5 {
 		margin-bottom: 2.5rem;
-		font: 3rem/3.8rem "NunitoLight"; 
-	}
-	p {
-		font: 1.8rem/4rem "YantramanavThin";
 	}
 	.whyContent__descript {
 		display: flex;
-		justify-content: space-between; 
+		justify-content: space-between;
+		flex-flow: wrap;
 		text-align: left;
 		padding: 0 6rem 0 6rem;
 		transform: translateY(-40px);
@@ -323,28 +330,95 @@ html {
 		}
 	}
 }
+@media screen and (max-width: 768px) {
+	.whyContent {
+		height: 100%;
+		.whyContent__descript {
+			.leftBlock, .rightBlock {
+				z-index: 99999;
+				.textBlock {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
 .find {
 	padding-top: 9rem;
 	text-align: center;
 	max-width: 1280px;
-	h5 {
-		font: 3rem/3.8rem "NunitoLight"; 
-	}
-	p {
-		font: 1.8rem/4rem "YantramanavThin";
+	margin: 0 auto;
+	p:nth-of-type(1) {
+		margin-bottom: 10rem;
 	}
 	.findBlocks {
 		text-align: left;
 		display: flex;
 		flex-flow: wrap;
-		p {
-			font: 1.5rem/2.2rem "YantramanavThin";
-		}
-		.title {
-			font: 1.6rem/2.4rem "YantramanavRegular";
+		justify-content: center;
+		padding: 0 10rem 0 10rem;
+		.textBlock {
+			margin: 0 8rem 8rem 0;
+			p {
+				font: 1.5rem/2.2rem "YantramanavThin";
+				margin-bottom: 0;
+			}
+			p:nth-of-type(2){
+				margin-bottom: 1rem;	
+			}
+			p:nth-of-type(3){
+				color: darkgreen;
+			}
+			.title {
+				font: 1.6rem/2.4rem "YantramanavRegular";
+			}
 		}
 	}
-	
+}
+.like {
+	margin-bottom: 8rem;
+	p {
+		margin-bottom: 5rem;
+	}
+	.contact {
+		display: flex;
+		justify-content: center;
+		p:first-child {
+			color: darkgreen;
+			margin-bottom: 0;
+		}
+		p {
+			padding: 0 5rem;
+			margin-bottom: 0;
+		}
+	}
+}
+/*------------------------------------------------FOOTER-------------------------------*/
+.footer {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.footerWrap {
+	width: 100%;
+	padding: 13rem 0;
+	text-align: center;
+	background-color: #f3f3f3;
+	.footerTitle {
+		font: 3rem/3.8rem "NunitoLight"; 
+	}
+	p {
+		font: 2.2rem/3.8rem "YantramanavLight";
+		margin-bottom: 5rem;
+	}
+}
+.allRight {
+	width: 100%;
+	background-color: #dcdcdc;
+	padding: 1.6rem 0 1.6rem 3rem;
+	p {
+		font: 1.4rem/2rem "YantramanavRegular";
+		color: #fff;
+	}
 }
 @media screen and (width: 768px) {
 		

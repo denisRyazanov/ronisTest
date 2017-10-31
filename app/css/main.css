@@ -70,26 +70,6 @@ html {
     color: #fff;
     margin-bottom: 6rem;
     text-shadow: 0 0 10px black; }
-  .header .signUp {
-    border-radius: 24px 0 0 24px;
-    width: 310px;
-    height: 4.8rem;
-    vertical-align: middle;
-    padding: 0 3rem;
-    font: 1.8rem/1.8rem "YantramanavLight";
-    color: #8c8c8c; }
-  .header button {
-    width: 165px;
-    height: 48px;
-    margin-left: -2px;
-    vertical-align: middle;
-    background-color: #20ab50;
-    border-radius: 0 24px 24px 0;
-    font: 2rem/1.8rem "NunitoRegular";
-    color: #fff;
-    cursor: pointer; }
-    .header button:hover {
-      background-color: #1a8a41; }
   .header .dotNav {
     display: flex;
     flex-flow: column;
@@ -109,12 +89,35 @@ html {
         width: 12px;
         height: 12px; }
 
+/*----------------------sign up------------------------------*/
+.signUp {
+  border-radius: 24px 0 0 24px;
+  width: 310px;
+  height: 4.8rem;
+  vertical-align: middle;
+  padding: 0 3rem;
+  font: 1.8rem/1.8rem "YantramanavLight";
+  color: #8c8c8c; }
+
+button {
+  width: 165px;
+  height: 48px;
+  margin-left: -2px;
+  vertical-align: middle;
+  background-color: #20ab50;
+  border-radius: 0 24px 24px 0;
+  font: 2rem/1.8rem "NunitoRegular";
+  color: #fff;
+  cursor: pointer; }
+  button:hover {
+    background-color: #1a8a41; }
+
 /*--------------------------------------------------MEDIA HEADER--------------------*/
 @media screen and (max-width: 414px) {
+  .signUp, button {
+    border-radius: 24px; }
   .header .header__title {
     padding-top: 120px; }
-  .header .signUp, .header button {
-    border-radius: 24px; }
   .header .dotNav {
     flex-flow: wrap;
     top: 95%;
@@ -223,6 +226,14 @@ html {
   max-width: 1280px;
   margin: 0 auto; }
 
+.whyContent h5, .find h5, .like h5 {
+  text-align: center;
+  font: 3rem/3.8rem "NunitoLight"; }
+
+.whyContent p, .find p, .like p {
+  text-align: center;
+  font: 1.8rem/4rem "YantramanavThin"; }
+
 .whyContent {
   width: 100%;
   height: 768px;
@@ -230,13 +241,11 @@ html {
   background: url(../assets/img/whyDots.png) center 180px no-repeat, url(../assets/img/whyBg.jpg) center no-repeat;
   padding-top: 8rem; }
   .whyContent h5 {
-    margin-bottom: 2.5rem;
-    font: 3rem/3.8rem "NunitoLight"; }
-  .whyContent p {
-    font: 1.8rem/4rem "YantramanavThin"; }
+    margin-bottom: 2.5rem; }
   .whyContent .whyContent__descript {
     display: flex;
     justify-content: space-between;
+    flex-flow: wrap;
     text-align: left;
     padding: 0 6rem 0 6rem;
     transform: translateY(-40px); }
@@ -251,19 +260,73 @@ html {
     .whyContent .whyContent__descript .leftBlock .title, .whyContent .whyContent__descript .rightBlock .title {
       font: 1.6rem/2.4rem "YantramanavRegular"; }
 
+@media screen and (max-width: 768px) {
+  .whyContent {
+    height: 100%; }
+    .whyContent .whyContent__descript .leftBlock, .whyContent .whyContent__descript .rightBlock {
+      z-index: 99999; }
+      .whyContent .whyContent__descript .leftBlock .textBlock, .whyContent .whyContent__descript .rightBlock .textBlock {
+        width: 100%; } }
+
 .find {
   padding-top: 9rem;
   text-align: center;
-  max-width: 1280px; }
-  .find h5 {
-    font: 3rem/3.8rem "NunitoLight"; }
-  .find p {
-    font: 1.8rem/4rem "YantramanavThin"; }
+  max-width: 1280px;
+  margin: 0 auto; }
+  .find p:nth-of-type(1) {
+    margin-bottom: 10rem; }
   .find .findBlocks {
     text-align: left;
     display: flex;
-    flex-flow: wrap; }
-    .find .findBlocks p {
-      font: 1.5rem/2.2rem "YantramanavThin"; }
-    .find .findBlocks .title {
-      font: 1.6rem/2.4rem "YantramanavRegular"; }
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 0 10rem 0 10rem; }
+    .find .findBlocks .textBlock {
+      margin: 0 8rem 8rem 0; }
+      .find .findBlocks .textBlock p {
+        font: 1.5rem/2.2rem "YantramanavThin";
+        margin-bottom: 0; }
+      .find .findBlocks .textBlock p:nth-of-type(2) {
+        margin-bottom: 1rem; }
+      .find .findBlocks .textBlock p:nth-of-type(3) {
+        color: darkgreen; }
+      .find .findBlocks .textBlock .title {
+        font: 1.6rem/2.4rem "YantramanavRegular"; }
+
+.like {
+  margin-bottom: 8rem; }
+  .like p {
+    margin-bottom: 5rem; }
+  .like .contact {
+    display: flex;
+    justify-content: center; }
+    .like .contact p:first-child {
+      color: darkgreen;
+      margin-bottom: 0; }
+    .like .contact p {
+      padding: 0 5rem;
+      margin-bottom: 0; }
+
+/*------------------------------------------------FOOTER-------------------------------*/
+.footer {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.footerWrap {
+  width: 100%;
+  padding: 13rem 0;
+  text-align: center;
+  background-color: #f3f3f3; }
+  .footerWrap .footerTitle {
+    font: 3rem/3.8rem "NunitoLight"; }
+  .footerWrap p {
+    font: 2.2rem/3.8rem "YantramanavLight";
+    margin-bottom: 5rem; }
+
+.allRight {
+  width: 100%;
+  background-color: #dcdcdc;
+  padding: 1.6rem 0 1.6rem 3rem; }
+  .allRight p {
+    font: 1.4rem/2rem "YantramanavRegular";
+    color: #fff; }
