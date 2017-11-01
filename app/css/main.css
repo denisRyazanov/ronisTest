@@ -117,13 +117,7 @@ button {
   .signUp, button {
     border-radius: 24px; }
   .header .header__title {
-    padding-top: 120px; }
-  .header .dotNav {
-    flex-flow: wrap;
-    top: 95%;
-    right: calc(50% - 65px); }
-    .header .dotNav a {
-      margin-right: 1rem; } }
+    padding-top: 120px; } }
 
 /*----------------------------------------------------------END HEADER-----------------------------------------------*/
 .about, .review {
@@ -158,20 +152,6 @@ button {
       font: 2rem/3rem "YantramanavThin";
       text-align: center;
       padding: 0 16.5rem 10rem 16.5rem; }
-
-/*--------------------------------------------------MEDIA MAIN--------------------*/
-@media screen and (max-width: 1024px) {
-  .descript {
-    width: 90%; }
-    .descript p {
-      padding: 0 0 4rem 0; }
-  .review .descript {
-    width: 90%; }
-    .review .descript h3 {
-      padding-top: 8rem;
-      margin-bottom: 6rem; }
-    .review .descript p {
-      padding: 0 0 10rem 0; } }
 
 /*---------------------------------------------------SLIDER----------------------------------------------*/
 .slider {
@@ -260,13 +240,8 @@ button {
     .whyContent .whyContent__descript .leftBlock .title, .whyContent .whyContent__descript .rightBlock .title {
       font: 1.6rem/2.4rem "YantramanavRegular"; }
 
-@media screen and (max-width: 768px) {
-  .whyContent {
-    height: 100%; }
-    .whyContent .whyContent__descript .leftBlock, .whyContent .whyContent__descript .rightBlock {
-      z-index: 99999; }
-      .whyContent .whyContent__descript .leftBlock .textBlock, .whyContent .whyContent__descript .rightBlock .textBlock {
-        width: 100%; } }
+.greenText {
+  color: green; }
 
 .find {
   padding-top: 9rem;
@@ -286,10 +261,10 @@ button {
       .find .findBlocks .textBlock p {
         font: 1.5rem/2.2rem "YantramanavThin";
         margin-bottom: 0; }
+      .find .findBlocks .textBlock .greenText {
+        font: 1.5rem/2.2rem "YantramanavLight"; }
       .find .findBlocks .textBlock p:nth-of-type(2) {
         margin-bottom: 1rem; }
-      .find .findBlocks .textBlock p:nth-of-type(3) {
-        color: darkgreen; }
       .find .findBlocks .textBlock .title {
         font: 1.6rem/2.4rem "YantramanavRegular"; }
 
@@ -302,10 +277,34 @@ button {
     justify-content: center; }
     .like .contact p:first-child {
       color: darkgreen;
+      margin-right: 5rem;
       margin-bottom: 0; }
+    .like .contact .greenText {
+      font-family: "YantramanavLight"; }
     .like .contact p {
-      padding: 0 5rem;
       margin-bottom: 0; }
+
+/*--------------------------------------------------MEDIA MAIN--------------------*/
+@media screen and (max-width: 1024px) {
+  .descript {
+    width: 90%; }
+    .descript p {
+      padding: 0 0 4rem 0; }
+  .review .descript {
+    width: 90%; }
+    .review .descript h3 {
+      padding-top: 8rem;
+      margin-bottom: 6rem; }
+    .review .descript p {
+      padding: 0 0 10rem 0; } }
+
+@media screen and (max-width: 768px) {
+  .whyContent {
+    height: 100%; }
+    .whyContent .whyContent__descript .leftBlock, .whyContent .whyContent__descript .rightBlock {
+      z-index: 99999; }
+      .whyContent .whyContent__descript .leftBlock .textBlock, .whyContent .whyContent__descript .rightBlock .textBlock {
+        width: 100%; } }
 
 /*------------------------------------------------FOOTER-------------------------------*/
 .footer {
@@ -330,3 +329,7 @@ button {
   .allRight p {
     font: 1.4rem/2rem "YantramanavRegular";
     color: #fff; }
+
+@media screen and (max-width: 768px) {
+  .find .findBlocks .textBlock {
+    margin: 0 0 4rem 0; } }

@@ -136,14 +136,6 @@ button {
 		.header__title {
 			padding-top: 120px;
 		}
-		.dotNav {
-			flex-flow: wrap;
-			top: 95%;
-			right: calc(50% - 65px);
-			a {
-				margin-right: 1rem;
-			}
-		}
 	}
 }
 
@@ -191,27 +183,7 @@ button {
 		}
 	}
 }
-/*--------------------------------------------------MEDIA MAIN--------------------*/
-@media screen and (max-width: 1024px) {
-	.descript { 
-		width: 90%;
-		p {
-			padding: 0 0 4rem 0;
-		}
-	}
-	.review {
-		.descript {
-			width: 90%;
-			h3 {
-				padding-top: 8rem;
-				margin-bottom: 6rem;
-			}
-			p {
-				padding: 0 0 10rem 0;
-			}
-		}
-	}
-}
+
 /*---------------------------------------------------SLIDER----------------------------------------------*/
 .slider {
 	text-align: center;
@@ -330,19 +302,11 @@ button {
 		}
 	}
 }
-@media screen and (max-width: 768px) {
-	.whyContent {
-		height: 100%;
-		.whyContent__descript {
-			.leftBlock, .rightBlock {
-				z-index: 99999;
-				.textBlock {
-					width: 100%;
-				}
-			}
-		}
-	}
+.greenText {
+	color: green;
+	
 }
+
 .find {
 	padding-top: 9rem;
 	text-align: center;
@@ -363,11 +327,11 @@ button {
 				font: 1.5rem/2.2rem "YantramanavThin";
 				margin-bottom: 0;
 			}
+			.greenText {
+				font: 1.5rem/2.2rem "YantramanavLight"
+			}
 			p:nth-of-type(2){
 				margin-bottom: 1rem;	
-			}
-			p:nth-of-type(3){
-				color: darkgreen;
 			}
 			.title {
 				font: 1.6rem/2.4rem "YantramanavRegular";
@@ -385,11 +349,50 @@ button {
 		justify-content: center;
 		p:first-child {
 			color: darkgreen;
+			margin-right: 5rem;
 			margin-bottom: 0;
 		}
+		.greenText {
+			font-family: "YantramanavLight";
+		}
 		p {
-			padding: 0 5rem;
 			margin-bottom: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------MEDIA MAIN--------------------*/
+@media screen and (max-width: 1024px) {
+	.descript { 
+		width: 90%;
+		p {
+			padding: 0 0 4rem 0;
+		}
+	}
+	.review {
+		.descript {
+			width: 90%;
+			h3 {
+				padding-top: 8rem;
+				margin-bottom: 6rem;
+			}
+			p {
+				padding: 0 0 10rem 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.whyContent {
+		height: 100%;
+		.whyContent__descript {
+			.leftBlock, .rightBlock {
+				z-index: 99999;
+				.textBlock {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -420,6 +423,12 @@ button {
 		color: #fff;
 	}
 }
-@media screen and (width: 768px) {
-		
+@media screen and (max-width: 768px) {
+	.find {
+		.findBlocks {
+			.textBlock {
+				margin: 0 0 4rem 0;
+			}
+		}
+	}
 }
